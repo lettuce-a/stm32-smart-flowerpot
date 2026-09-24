@@ -1,0 +1,34 @@
+# Web dashboard: maintained and deployed separately; never include it here.
+dashboard/
+
+# Build artifacts and temporary exports.
+OBJ/
+Listings/
+tmp/
+.tmp_pdf_libs/
+*.axf
+*.hex
+*.bin
+*.o
+*.d
+*.crf
+*.lst
+*.map
+*.build_log.htm
+
+# Keil and debug files created for a specific computer/user.
+USER/*.uvoptx
+USER/*.uvguix.*
+USER/JLinkSettings.ini
+USER/DebugConfig/
+USER/EventRecorderStub.scvd
+
+# Local network settings: never commit real Wi-Fi or server values.
+USER/wifi_config.h
+
+# Operating-system and editor clutter.
+.DS_Store
+Thumbs.db
+*.tmp
+*.bak
+*.log

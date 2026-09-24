@@ -1,0 +1,28 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "STM32: Build HAL",
+      "type": "shell",
+      "command": "D:/keil_ARM/UV4/UV4.exe",
+      "args": ["-b", "${workspaceFolder}/OLED.uvprojx", "-j0"],
+      "group": { "kind": "build", "isDefault": true },
+      "problemMatcher": []
+    },
+    {
+      "label": "STM32: Rebuild HAL",
+      "type": "shell",
+      "command": "D:/keil_ARM/UV4/UV4.exe",
+      "args": ["-r", "${workspaceFolder}/OLED.uvprojx", "-j0"],
+      "problemMatcher": []
+    },
+    {
+      "label": "STM32: Flash with ST-Link",
+      "type": "shell",
+      "command": "D:/keil_ARM/UV4/UV4.exe",
+      "args": ["-f", "${workspaceFolder}/OLED.uvprojx", "-j0"],
+      "dependsOn": "STM32: Build HAL",
+      "problemMatcher": []
+    }
+  ]
+}
