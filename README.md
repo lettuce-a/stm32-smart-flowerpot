@@ -61,10 +61,21 @@ T=29,H=59,SOIL=43,ADC=2840,CO2=956,TVOC=159
 3. 使用 ST-Link 连接 SWD 接口后，选择 `Flash → Download`。
 4. 若出现 `wifi_config.h: No such file`，按上节创建本机 Wi-Fi 配置文件。
 
+## 硬件设计（嘉立创 EDA）
+
+本仓库包含完整的嘉立创 EDA 硬件工程，位于 [`EDA/JLCEDA/`](EDA/JLCEDA/)。
+
+- 打开文件：`EDA/JLCEDA/花盆1.0_2026-08-13-18-56-40/花盆1.0.epru`
+- 工程版本：嘉立创 EDA 专业版 `3.2.149.88089769`
+- `IMAGE/` 内保存 PCB 布局与原理图预览图
+
+修改原理图或 PCB 后，请重新核对模块接线与 `USER/main.c` 内的 STM32 引脚定义是否一致，再进行编译和硬件测试。
+
 ## 目录说明
 
 - `USER/`：主程序、Keil 工程文件与中断配置
 - `HARDWARE/OLED/`：OLED 驱动
+- `EDA/JLCEDA/`：嘉立创 EDA 原理图、PCB 工程与预览图
 - `HAL/`、`CMSIS/`、`CORE/`、`SYSTEM/`、`STM32F10x_FWLib/`：STM32 库与底层支持文件
 - `OBJ/`、`Listings/`：Keil 自动生成，已排除
 
